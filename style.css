@@ -1,0 +1,74 @@
+/* Glowfly yasal ve destek sayfaları (GitHub Pages) */
+:root {
+  --bg: #f6f5fb;
+  --card: #ffffff;
+  --ink: #1b1f3b;
+  --muted: #5b5f7a;
+  --line: #e2e1ee;
+  --accent: #b7791f;
+  --glow: #ffd36e;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #10142e;
+    --card: #171c3d;
+    --ink: #f1f0fb;
+    --muted: #a9abc8;
+    --line: #2a3060;
+    --accent: #ffd36e;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+header {
+  background: #141a3d;
+  color: #f1f0fb;
+  padding: 18px max(20px, env(safe-area-inset-left)) 18px;
+}
+header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; font-weight: 700; font-size: 18px; }
+.brand .dot { width: 14px; height: 14px; border-radius: 50%; background: #fff4c9; box-shadow: 0 0 14px 4px rgba(255, 211, 110, 0.7); }
+header nav { display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; }
+header nav a { color: #d8d6f2; text-decoration: none; }
+header nav a[aria-current="page"] { color: var(--glow); }
+.wrap { max-width: 760px; margin: 0 auto; }
+main { padding: 28px max(20px, env(safe-area-inset-left)) 48px; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; }
+h2 { font-size: 20px; margin: 34px 0 8px; }
+h3 { font-size: 17px; margin: 22px 0 4px; }
+p, li { max-width: 68ch; }
+.meta { color: var(--muted); font-size: 14px; margin: 0 0 22px; }
+.note {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--glow);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 18px 0;
+}
+a { color: var(--accent); }
+table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 12px 0; }
+.table-wrap { overflow-x: auto; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; font-size: 13px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 22px 0; }
+.cards a {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.cards a b { display: block; margin-bottom: 4px; }
+.cards a span { color: var(--muted); font-size: 14px; }
+.email { font-weight: 700; user-select: all; }
+footer { color: var(--muted); font-size: 13px; padding: 0 max(20px, env(safe-area-inset-left)) 32px; }
